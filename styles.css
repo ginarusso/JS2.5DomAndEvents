@@ -4,14 +4,62 @@ body {
 }
 
 main {
-    max-width: 300px;
+    max-width: 400px;
+    height: 50vh;
     background-color: #fff;
     margin: 6em auto;
     padding: 1.5em;
     border-radius: 1em;
     border: 4px solid darkslategrey;
 }
+.inputs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+hr {
+    margin-top: 1.5em;
+}
+
+input {
+    padding: 1em;
+    width: 4em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+
+}
 
 button {
     margin-top: 1em;
+    padding: .5em;
+    font-size: 1rem;
+}
+ 
+p {
+    text-align: center;
+    font-weight: bold;
+    margin: .25em;
+    font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#reset {
+    font-size: 1.5em;
+    background-color:yellow;
+    padding: 1em;
+    font-weight: bold;
+}
+.resetBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#result {
+
 }

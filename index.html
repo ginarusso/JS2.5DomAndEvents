@@ -7,15 +7,20 @@
     <body>
         <main>
 <!-- create two number input fields -->
+        <div class="inputs">           
             <input type="number" id="num1" />  
             <input type="number" id="num2" />
-    <!-- create 5 buttons corresponding to the 5 basic arithmetic operations (addition, subtraction, multiplication, division) -->
+        </div>  
+        <hr>  
+            <!-- create 5 buttons corresponding to the 5 basic arithmetic operations (addition, subtraction, multiplication, division) -->
         <div class="container"> 
             <button id="addition" data-add-numbers="+">+</button>
             <button id="subtraction" data-subtract-numbers="-">-</button>
             <button id="multiplication" data-multiply-numbers="*">*</button>
             <button id="division" data-divide-numbers="/">/</button>
             <button id="modulo" data-modulo-numbers="%">%</button>
+        </div>
+        <div class="resetBtn">
             <!-- <button id="reset" onclick="reset()">RESET</button> -->
             <button id="reset" data-reset-btn="reset">RESET</button>
             <!-- create paragraph with span for result -->

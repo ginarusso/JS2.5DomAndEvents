@@ -38,7 +38,7 @@ containerEl.addEventListener('click', function (e) {
         result.innerText = answer
     } else if (divideNums) {
         answer = num1 / num2
-        result.innerText = answer
+        result.innerText = answer.toFixed(2)
     } else if (moduloNums) {
         answer = num1 % num2
         result.innerText = answer
