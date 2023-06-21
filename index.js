@@ -6,6 +6,7 @@ const containerEl = document.querySelector('body')
 let num1El = document.getElementById('num1')
 let num2El = document.getElementById('num2')
 let result = document.querySelector('#result')
+const resetButton = document.getElementById('reset')
 
 // let resultEl = document.getElementById('result')
 let answer = 0
@@ -26,7 +27,6 @@ containerEl.addEventListener('click', function (e) {
     const multiplyNums = target.dataset.multiplyNumbers
     const divideNums = target.dataset.divideNumbers
     const moduloNums = target.dataset.moduloNumbers
-    const resetButton = target.dataset.resetBtn
 
     if (addNums) {
         answer = num1 + num2
@@ -43,12 +43,24 @@ containerEl.addEventListener('click', function (e) {
     } else if (moduloNums) {
         answer = num1 % num2
         result.innerText = answer
-    } else if (resetButton) {
-        answer = 0
-        result.innerText = answer
-    }
+     } 
+    //  else if (resetButton) {
+    //     answer = 0
+    //     result.innerText = answer
+    // }
+    resetButton.addEventListener('click', resetBtn)
 } )
 
+function resetBtn() {
+    console.log("reset clicked")
+    answer = 0
+    console.log(num1El.value)
+    result.innerText = answer
+    num1El.value = ""
+    num2El.value = ""
+    num1El.innerText = num1El
+    num2El.innerText = num2El
+}
 //refactored: removed onclick from HTML
 // function compute() {
 //     // const num1 = parseInt(num1El.value)
