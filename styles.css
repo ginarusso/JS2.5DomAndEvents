@@ -1,20 +1,28 @@
+@font-face {
+    font-family: Cursed Timer ULiL;
+    src: url(CursedTimerUlil-Aznm.ttf);
+  }
+
 body {
     background-image: url('/math-bg.jpg');
     background-size: cover;
+    font-family: "Cursed Timer ULiL";
 }
 
 main {
     max-width: 400px;
-    height: 550px;
-    background-color: #fff;
+    height: 690px;
+    background-color: #000;
     margin: 6em auto;
     padding: 0 1.5em 0 1.5em;
-    border-radius: 1em;
+    border-radius: 16px;
     border: 4px solid darkslategrey;
 }
 .inputs {
     display: flex;
     justify-content: space-evenly;
+    padding-top: 1em;
+    font-family: "Cursed Timer ULiL";
 }
 
 hr {
@@ -23,19 +31,21 @@ hr {
 }
 
 input {
-    padding: 1em;
-    width: 4em;
-    font-size: 1.5em;
+    padding: .75em;
+    width: 2.5em;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
-    border: 2px solid #000;
+    border: 2px solid #fff;
+    border-radius: 10px;
 }
 
 button {
     margin-top: 1em;
-    padding: .5em;
-    font-size: 1rem;
+    padding: .75em;
+    font-size: 1.5rem;
     border: 2px solid #000;
+    border-radius: 10px;
 }
 
 button:hover {
@@ -48,6 +58,9 @@ p {
     font-weight: bold;
     margin: 1em;
     font-size: 1.5rem;
+    color: #fff;
+    text-transform:uppercase;
+    letter-spacing: .1em;
 }
 
 .container {
@@ -59,7 +72,7 @@ p {
     font-size: 1.5em;
     background-color:yellow;
     padding: .75em;
-    margin: 0;
+    margin: 1.5em 0;
     font-weight: bold;
 }
 
@@ -77,5 +90,7 @@ p {
     background-color: green;
     border: 2px solid black;
     color: white;
-    padding: 0 1em;
+    padding: .5em 1em;
+    border-radius: 10px;
+    font-size: 2em;
 }

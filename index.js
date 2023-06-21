@@ -30,12 +30,7 @@ containerEl.addEventListener('click', function (e) {
     const multiplyNums = target.dataset.multiplyNumbers
     const divideNums = target.dataset.divideNumbers
     const moduloNums = target.dataset.moduloNumbers
-    const numFirst = e.target.dataset.num1
-    const numSecond = e.target.dataset.num2
 
-    // if (numFirst !== true && numSecond !== true) {
-    //     console.log("Check your inputs!")
-    // }
     if (addNums) {
         answer = num1 + num2
         result.innerText = answer
@@ -47,7 +42,7 @@ containerEl.addEventListener('click', function (e) {
         result.innerText = answer
     } else if (divideNums) {
         answer = num1 / num2
-        result.innerText = answer.toFixed(1)
+        result.innerText = parseFloat(answer.toFixed(1))
     } else if (moduloNums) {
         answer = num1 % num2
         result.innerText = answer
@@ -60,6 +55,7 @@ containerEl.addEventListener('click', function (e) {
 } )
 
 function resetBtn() {
+
     answer = 0
     result.innerText = answer
     num1El.value = ""
