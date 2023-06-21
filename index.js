@@ -25,7 +25,7 @@ containerEl.addEventListener('click', function (e) {
     const multiplyNums = target.dataset.multiplyNumbers
     const divideNums = target.dataset.divideNumbers
     const moduloNums = target.dataset.moduloNumbers
-    // const reset = target.dataset.reset
+    const resetButton = target.dataset.resetBtn
 
     if (addNums) {
         answer = num1 + num2
@@ -42,8 +42,9 @@ containerEl.addEventListener('click', function (e) {
     } else if (moduloNums) {
         answer = num1 % num2
         result.innerText = answer
-    } else {
-        result.innerText = 0
+    } else if (resetButton) {
+        answer = 0
+        result.innerText = answer
     }
 } )
 
