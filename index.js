@@ -10,6 +10,7 @@ let num2El = document.getElementById('num2')
 let result = document.querySelector('#result')
 const resetButton = document.getElementById('reset')
 
+
 // let resultEl = document.getElementById('result')
 let answer = 0
 result.innerText = 0
@@ -29,7 +30,12 @@ containerEl.addEventListener('click', function (e) {
     const multiplyNums = target.dataset.multiplyNumbers
     const divideNums = target.dataset.divideNumbers
     const moduloNums = target.dataset.moduloNumbers
+    const numFirst = e.target.dataset.num1
+    const numSecond = e.target.dataset.num2
 
+    // if (numFirst !== true && numSecond !== true) {
+    //     console.log("Check your inputs!")
+    // }
     if (addNums) {
         answer = num1 + num2
         result.innerText = answer
@@ -41,7 +47,7 @@ containerEl.addEventListener('click', function (e) {
         result.innerText = answer
     } else if (divideNums) {
         answer = num1 / num2
-        result.innerText = answer.toFixed(2)
+        result.innerText = answer.toFixed(1)
     } else if (moduloNums) {
         answer = num1 % num2
         result.innerText = answer
