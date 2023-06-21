@@ -6,6 +6,7 @@ const containerEl = document.querySelector('body')
 let num1El = document.getElementById('num1')
 let num2El = document.getElementById('num2')
 let result = document.querySelector('#result')
+
 // let resultEl = document.getElementById('result')
 let answer = 0
 result.innerText = 0
