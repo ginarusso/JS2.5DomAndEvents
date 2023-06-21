@@ -1,3 +1,5 @@
+//need to account for NaN
+
 const containerEl = document.querySelector('body')
 // const add = document.querySelector('#addition')
 // const subtract = document.querySelector('#subtraction')
@@ -52,9 +54,7 @@ containerEl.addEventListener('click', function (e) {
 } )
 
 function resetBtn() {
-    console.log("reset clicked")
     answer = 0
-    console.log(num1El.value)
     result.innerText = answer
     num1El.value = ""
     num2El.value = ""
