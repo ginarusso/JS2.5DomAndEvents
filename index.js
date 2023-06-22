@@ -11,10 +11,9 @@ let errorMsg = document.getElementById('error-msg')
 let result = document.querySelector('#result')
 const resetButton = document.getElementById('reset')
 
-
 // let resultEl = document.getElementById('result')
-let answer = 0
-result.innerText = 0
+let answer;
+result.innerText;
 // function reset() {
 //     console.log("clicked")
 //     result.innerText = 0
@@ -26,31 +25,35 @@ containerEl.addEventListener('click', function (e) {
     let num1 = parseInt(num1El.value)
     let num2 = parseInt(num2El.value)
     const target = e.target
+    const firstNum = target.dataset.firstNum
+    const secondNum = target.dataset.secondNum
     const addNums = target.dataset.addNumbers
     const subtractNums = target.dataset.subtractNumbers
     const multiplyNums = target.dataset.multiplyNumbers
     const divideNums = target.dataset.divideNumbers
     const moduloNums = target.dataset.moduloNumbers
-    // if (Number.isFinite(num1) || (Number.isFinite(num2))) {
-    // if (num1 === 0  || num2 === 0) {
-    //     errorMsg.innerText = `Please enter a number!`
-    // }
-    if (addNums) {
+
+  if (addNums && !isNaN(num1) && addNums && !isNaN(num2)) {
         answer = num1 + num2
         result.innerText = answer
-        } else if (subtractNums) {
+        } else if (subtractNums && !isNaN(num1) && subtractNums && !isNaN(num2)) {
             answer = num1 - num2
             result.innerText = answer
-        } else if (multiplyNums) {
+        } else if (multiplyNums && !isNaN(num1) && multiplyNums && !isNaN(num2)) {
             answer = num1 * num2
             result.innerText = answer
-        } else if (divideNums) {
+        } else if ((divideNums && num2 !== 0) && (divideNums && !isNaN(num2))) {
             answer = num1 / num2
             result.innerText = parseFloat(answer.toFixed(1))
-        } else if (moduloNums) {
+        } else if ((moduloNums && num2 !== 0) && (moduloNums && !isNaN(num2))) {
             answer = num1 % num2
             result.innerText = answer
-     } 
+        } else if (moduloNums && num2 === 0) {
+                errorMsg.innerHTML = `<p id="error-msg" class="error-msg">Invalid 2nd number for modulo (0)</p>`
+                result.innerText = ""
+                const myTimeout = setTimeout(resetBtn, 2000);
+            }
+     
     //  else if (resetButton) {
     //     answer = 0
     //     result.innerText = answer
@@ -60,13 +63,13 @@ containerEl.addEventListener('click', function (e) {
  )
 
 function resetBtn() {
-    answer = 0
+    answer = ""
     result.innerText = answer
     num1El.value = ""
     num2El.value = ""
     num1El.innerText = num1El
     num2El.innerText = num2El
-    // errorMsg.innerText = ""
+    errorMsg.innerHTML = `Choose a button<br>to compute`
 }
 //refactored: removed onclick from HTML
 // function compute() {
