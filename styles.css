@@ -3,15 +3,18 @@
     src: url(CursedTimerUlil-Aznm.ttf);
   }
 
+html {
+    font-family: "Cursed Timer ULiL";
+}
+
 body {
     background-image: url('/math-bg.jpg');
     background-size: cover;
-    font-family: "Cursed Timer ULiL";
 }
 
 main {
     max-width: 400px;
-    height: 690px;
+    height: 675px;
     background-color: #000;
     margin: 6em auto;
     padding: 0 1.5em 0 1.5em;
@@ -22,7 +25,6 @@ main {
     display: flex;
     justify-content: space-evenly;
     padding-top: 1em;
-    font-family: "Cursed Timer ULiL";
 }
 
 hr {
@@ -31,21 +33,22 @@ hr {
 }
 
 input {
-    padding: .75em;
+    padding: 0.5em 0;
     width: 2.5em;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
-    border: 2px solid #fff;
     border-radius: 10px;
+    font-family: "Cursed Timer ULiL";
 }
 
 button {
-    margin-top: 1em;
-    padding: .75em;
-    font-size: 1.5rem;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    font-size: 2.5rem;
     border: 2px solid #000;
     border-radius: 10px;
+    font-family: 'Cursed Timer ULiL';
 }
 
 button:hover {
