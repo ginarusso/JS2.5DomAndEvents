@@ -7,6 +7,7 @@ const containerEl = document.querySelector('body')
 // const divide = document.querySelector('#division')
 let num1El = document.getElementById('num1')
 let num2El = document.getElementById('num2')
+let errorMsg = document.getElementById('error-msg')
 let result = document.querySelector('#result')
 const resetButton = document.getElementById('reset')
 
@@ -30,38 +31,42 @@ containerEl.addEventListener('click', function (e) {
     const multiplyNums = target.dataset.multiplyNumbers
     const divideNums = target.dataset.divideNumbers
     const moduloNums = target.dataset.moduloNumbers
-    
+    // if (Number.isFinite(num1) || (Number.isFinite(num2))) {
+    // if (num1 === 0  || num2 === 0) {
+    //     errorMsg.innerText = `Please enter a number!`
+    // }
     if (addNums) {
         answer = num1 + num2
         result.innerText = answer
-    } else if (subtractNums) {
-        answer = num1 - num2
-        result.innerText = answer
-    } else if (multiplyNums) {
-        answer = num1 * num2
-        result.innerText = answer
-    } else if (divideNums) {
-        answer = num1 / num2
-        result.innerText = parseFloat(answer.toFixed(1))
-    } else if (moduloNums) {
-        answer = num1 % num2
-        result.innerText = answer
+        } else if (subtractNums) {
+            answer = num1 - num2
+            result.innerText = answer
+        } else if (multiplyNums) {
+            answer = num1 * num2
+            result.innerText = answer
+        } else if (divideNums) {
+            answer = num1 / num2
+            result.innerText = parseFloat(answer.toFixed(1))
+        } else if (moduloNums) {
+            answer = num1 % num2
+            result.innerText = answer
      } 
     //  else if (resetButton) {
     //     answer = 0
     //     result.innerText = answer
     // }
     resetButton.addEventListener('click', resetBtn)
-} )
+    }
+ )
 
 function resetBtn() {
-
     answer = 0
     result.innerText = answer
     num1El.value = ""
     num2El.value = ""
     num1El.innerText = num1El
     num2El.innerText = num2El
+    // errorMsg.innerText = ""
 }
 //refactored: removed onclick from HTML
 // function compute() {

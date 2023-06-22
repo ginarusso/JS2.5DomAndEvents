@@ -14,7 +14,7 @@ body {
 
 main {
     max-width: 400px;
-    height: 800px;
+    height: 715px;
     background-color: #000;
     margin: 2em auto;
     padding: 0 1.5em 0 1.5em;
@@ -30,6 +30,10 @@ main {
     color: #fff;
     text-align: center;
     gap: 1em;
+}
+
+.error-msg {
+    color: red;
 }
 
 hr {
@@ -64,7 +68,7 @@ button:hover {
 p {
     text-align: center;
     font-weight: bold;
-    margin: 1em;
+    margin: .5em 1em;
     font-size: 1.5rem;
     color: greenyellow;
     text-transform:uppercase;
