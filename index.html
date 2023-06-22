@@ -3,38 +3,41 @@
     <head>
         <title>JS DOM and Events</title>
         <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <main>
             <p>enter any two numbers below</p> 
 <!-- create two number input fields -->
-        <div class="inputs">
-            <label for="num1">1st number: </label>          
-            <input type="number" id="num1" required> 
-        </div>
-        <div class="inputs">
-            <label for="num2">2nd number: </label> 
-            <input type="number" id="num2" required>
-        </div>  
-        <hr>  
-        <p>Choose a button to compute</p>
-            <!-- create 5 buttons corresponding to the 5 basic arithmetic operations (addition, subtraction, multiplication, division) -->
-        <div class="container"> 
-            <button id="addition" data-add-numbers="+">+</button>
-            <button id="subtraction" data-subtract-numbers="-">-</button>
-            <button id="multiplication" data-multiply-numbers="*">*</button>
-            <button id="division" data-divide-numbers="/">/</button>
-            <button id="modulo" data-modulo-numbers="%">%</button>
-        </div>
-        <hr> 
-        <div class="answerSection">
-            <!-- create paragraph with span for result -->
-            <p>Answer: <span id="result"></span></p>
-            <!-- <button id="reset" onclick="reset()">RESET</button> -->
-            <button class="resetBtn" id="reset" data-reset-btn="reset">RESET</button>
-            <script src="./index.js"></script>
-        </div>
+            <div class="inputs">
+                <div>
+                    <h1>1st number</h1>          
+                    <input type="number" id="num1" name="num1" required>
+                </div> 
+                <div>
+                    <h1>2nd number</h1> 
+                    <input type="number" id="num2" name="num2" required>
+                </div>
+            </div>
+            <hr>
+                <p>Choose a button<br>to compute</p>
+<!-- create 5 buttons corresponding to the 5 basic arithmetic operations (addition, subtraction, multiplication, division) -->
+            <div class="container"> 
+                <button type="submit" id="addition" data-add-numbers="+">+</button>
+                <button type="submit" id="subtraction" data-subtract-numbers="-">-</button>
+                <button type="submit" id="multiplication" data-multiply-numbers="*">*</button>
+                <button type="submit" id="division" data-divide-numbers="/">/</button>
+                <button type="submit" id="modulo" data-modulo-numbers="%">%</button>
+            </div> 
+            <hr>  
+            <div class="answerSection">
+                <!-- create paragraph with span for result -->
+                <p>Answer: <span id="result"></span></p>
+                <!-- <button id="reset" onclick="reset()">RESET</button> -->
+                <button class="resetBtn" id="reset" data-reset-btn="reset">RESET</button>
+                <script src="./index.js"></script>
+            </div>
         </main>
     </body>
 </html>

@@ -30,7 +30,7 @@ containerEl.addEventListener('click', function (e) {
     const multiplyNums = target.dataset.multiplyNumbers
     const divideNums = target.dataset.divideNumbers
     const moduloNums = target.dataset.moduloNumbers
-console.log(num1)
+    
     if (addNums) {
         answer = num1 + num2
         result.innerText = answer
