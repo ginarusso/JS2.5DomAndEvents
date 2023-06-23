@@ -34,6 +34,7 @@ main {
 
 .error-msg {
     color: red;
+    font-size: 1.27rem;
 }
 
 hr {
@@ -45,7 +46,7 @@ hr {
 input {
     padding: 0.5em 0;
     width: 2.5em;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
     border-radius: 10px;
@@ -82,7 +83,7 @@ p {
 }
 
 .resetBtn {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     background-color:yellow;
     padding: .75em;
     margin: .75em 0 1em 0;
@@ -106,5 +107,5 @@ p {
     color: white;
     padding: 0.5em 0.75em;
     border-radius: 10px;
-    font-size: 2em;
+    font-size: 3rem;
 }
